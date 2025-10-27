@@ -1,14 +1,19 @@
 package com.example.journalApp.entity;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class JournalEntry {
-    private long id;
+    @Id
+    private String id;
     private String name;
     private String content;
     
-    public long getid(){
+    public String getid(){
         return id;
     }
-    public void setid(long id){
+    public void setid(String id){
         this.id = id;
     }
 
